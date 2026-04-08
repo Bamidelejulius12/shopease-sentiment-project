@@ -43,18 +43,18 @@ class Training:
         results = trainer.evaluate()
         return results
     
-def train_and_evaluate():
-    try:
-        train_dataset = torch.load(Train_Data)
-        test_dataset = torch.load(Test_Data)
-        train = Training()
-        trainer = train.model_training(train_dataset, test_dataset)
-        results = train.model_evaluation(trainer)
-        return results, trainer
-    except Exception as e:
-        logging.error(f"error occurred while training and evaluating the model {e}")
+# def train_and_evaluate():
+#     try:
+#         train_dataset = torch.load(Train_Data)
+#         test_dataset = torch.load(Test_Data)
+#         train = Training()
+#         trainer = train.model_training(train_dataset, test_dataset)
+#         results = train.model_evaluation(trainer)
+#         return results, trainer
+#     except Exception as e:
+#         logging.error(f"error occurred while training and evaluating the model {e}")
 
-train_and_evaluate()
+# train_and_evaluate()
 
 
 
